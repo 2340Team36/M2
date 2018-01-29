@@ -36,11 +36,13 @@ public class Person2 {
         Random rand = new Random(input.length());
         newStr = "";
         int randInt = rand.nextInt();
-        for (x = 0; x < input.length(); x++) {
+        int x = 0;
+        while (x < input.length()) {
             if (!newStr.contains(input.charAt(randInt))) {
                 randInt = rand.nextInt();
             } else {
                 newStr + Character.toString(input.charAt(randInt));
+                x++;
             }
         }
         return newStr;
