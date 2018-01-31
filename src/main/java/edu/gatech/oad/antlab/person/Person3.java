@@ -17,7 +17,7 @@ public class Person3 {
 	 * @param pname the person's real name
 	 */
 	public Person3(String pname){
-	  name = pname;
+	  name = "Kimberly Yip Chang";
 	}
 	
 	/**
@@ -42,10 +42,11 @@ public class Person3 {
 	 * @return the reversed string
 	 */
 	private String calc(String input) {
-	  private String newString = "";
+	  String newString = "";
 	  int count = 0;
-	  for(int i = 0; i < input.length; i++) {
-	  	newString = newString + input[length - i - 1];
+	  int n = input.length();
+	  for(int i = 0; i < input.length(); i++) {
+	  	newString = newString + input.charAt(n - i - 1);
 	    count++;
 	  }
 	  return newString;
