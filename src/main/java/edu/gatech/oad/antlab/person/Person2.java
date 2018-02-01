@@ -3,6 +3,7 @@ import java.util.Collections;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  *  A simple class for person 2
@@ -35,28 +36,29 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-        /*String newStr;
+        String newStr;
         Random rand = new Random(input.length());
         newStr = "";
         int randInt = rand.nextInt();
         int x = 0;
         while (x < input.length()) {
-            if (!(newStr.indexOf(input.charAt(randInt)))) {
+            if (!(newStr.contains(Character.toString(input.charAt(randInt))))) {
                 randInt = rand.nextInt();
             } else {
                 newStr = newStr + Character.toString(input.charAt(randInt));
                 x++;
             }
         }
-        return newStr;*/
+        return newStr;
         //String[] letters = input.split("");
-		List<String> letters = Arrays.asList(input.split(""));
+		/*List<String> letters = Arrays.asList(input.split(""));
         Collections.shuffle(letters);
         String shuffled = "";
         for(String l: letters) {
         	shuffled += l;
 		}
 		return shuffled;
+		 */
 	}
 	/**
 	 * Return a string rep of this object
