@@ -1,5 +1,8 @@
 package edu.gatech.oad.antlab.person;
-import java.util.Random;
+import java.util.Collections;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
 
 /**
  *  A simple class for person 2
@@ -18,7 +21,7 @@ public class Person2 {
 	 * @param pname the person's real name
 	 */
 	 public Person2(String pname) {
-	 	pname = Caroline Doi;
+	 	pname = "Caroline Doi";
 	 }
 	/**
 	 * This method should take the string
@@ -32,20 +35,28 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-        String newStr;
+        /*String newStr;
         Random rand = new Random(input.length());
         newStr = "";
         int randInt = rand.nextInt();
         int x = 0;
         while (x < input.length()) {
-            if (!newStr.contains(input.charAt(randInt))) {
+            if (!(newStr.indexOf(input.charAt(randInt)))) {
                 randInt = rand.nextInt();
             } else {
-                newStr + Character.toString(input.charAt(randInt));
+                newStr = newStr + Character.toString(input.charAt(randInt));
                 x++;
             }
         }
-        return newStr;
+        return newStr;*/
+        //String[] letters = input.split("");
+		List<String> letters = Arrays.asList(input.split(""));
+        Collections.shuffle(letters);
+        String shuffled = "";
+        for(String l: letters) {
+        	shuffled += l;
+		}
+		return shuffled;
 	}
 	/**
 	 * Return a string rep of this object
