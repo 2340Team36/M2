@@ -17,7 +17,7 @@ public class Person1 {
 	 * @param pname the person's real name
 	 */
   public Person1(String pname) {
-    name = "Tim Slanschek";
+    name = pname;
   }
   	/**
 	 * This method should take the string
